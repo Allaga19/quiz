@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
          // console.log('render');
          // первый вопрос
          questionTitle.textContent = 'Какого цвета бургер вы хотите?';
+         questionTitle.textContent = 'Какого цвета бургер вы хотите?';
       };
 
       renderQustions();
