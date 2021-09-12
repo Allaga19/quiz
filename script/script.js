@@ -4,7 +4,9 @@ document.addEventListener('DOMContentLoaded', function() {
    const modalBlock = document.getElementById('modalBlock');
    const closeModal = document.getElementById('closeModal');
    const questionTitle = document.getElementById('question');
-
+   const formAnswers = document.getElementById('formAnswers');
+  
+   
 
 // открываем окно по клику
    btnOpenModal.addEventListener('click', () => {
@@ -29,6 +31,23 @@ document.addEventListener('DOMContentLoaded', function() {
          // console.log('render');
          // первый вопрос
          questionTitle.textContent = 'Какого цвета бургер вы хотите?';
+         // переносим код из html
+         formAnswers.innerHTML = `
+            <div class="answers-item d-flex flex-column">
+               <input type="radio" id="answerItem1" name="answer" class="d-none">
+               <label for="answerItem1" class="d-flex flex-column justify-content-between">
+                  <img class="answerImg" src="./image/burger.png" alt="burger">
+                  <span>Стандарт</span>
+               </label>
+            </div>
+            <div class="answers-item d-flex justify-content-center">
+               <input type="radio" id="answerItem2" name="answer" class="d-none">
+               <label for="answerItem2" class="d-flex flex-column justify-content-between">
+                  <img class="answerImg" src="./image/burgerBlack.png" alt="burger">
+                  <span>Черный</span>
+               </label>
+            </div>
+         `;
          
       };
 
